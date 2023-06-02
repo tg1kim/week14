@@ -80,9 +80,7 @@ int MakeTree(TreePtr& pTree, int nData)
 	}
 	int nlCtr = CountNode(pTree->lChild), nrCtr = CountNode(pTree->rChild);
 	int nChild = nlCtr == nrCtr ? rand() % 2 : nlCtr > nrCtr;
-	if (nChild == 0)
-		return MakeTree(pTree->lChild, nData);
-	return MakeTree(pTree->rChild, nData);
+	return nChild ? MakeTree(pTree->rChild, nData) : MakeTree(pTree->lChild, nData);
 }
 
 void InorderTrvs(TreePtr pTree, NodePtr*& parNode)
