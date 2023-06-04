@@ -33,7 +33,7 @@ void ShowTree(TreePtr pTree);
 
 TreePtr pRoot;
 
-void main()
+void main()		// https://www.cs.usfca.edu/~galles/visualization/AVLtree.html
 {
 	while (1) {
 		pRoot = NULL;
